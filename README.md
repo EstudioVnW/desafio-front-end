@@ -1,64 +1,111 @@
-# Desafio Técnico - Desenvolvedor(a) Front-End
+# 📸 AlNicks Moments Insta
 
-Bem-vindo ao desafio técnico para a vaga de **Desenvolvedor(a) Front-End Jr.**!
-
-Este repositório contém o projeto de uma mini Rede Social de Fotos, desenvolvida para o desafio proposto. O objetivo é consumir a [API do Unsplash](https://unsplash.com/developers) utilizando **Next.js**, **Tailwind CSS** e **Typescript**.
-
----
-
-## 🥅 Objetivo
-
-Criar uma Rede Social de Fotos com as seguintes funcionalidades:
-
-1. **Exibir um grid de fotos aleatórias** (como um feed).
-2. **Permitir buscas** por termos (natureza, animais, etc.).
-3. **Exibir detalhes da foto em um modal** (autor, descrição, link).
-4. **Favoritar/desfavoritar fotos**, usando localStorage.
+Bem-vindo(a) ao **AlNicks Moments Insta**!  
+Um mini Instagram de fotos feito com carinho, inspirado nos meus filhos: **Alicia + Nickolas = AlNicks**!  
+Desenvolvido com **Next.js 14+, Tailwind CSS, TypeScript** e integração com a **API do Unsplash**.
 
 ---
 
-## 🧩 Requisitos Básicos
+## ✨ Funcionalidades
 
-- Exibir um grid de fotos aleatórias (mínimo 12) ao carregar a página.
-- Cada foto mostra:
-  - Imagem em alta (com lazy loading)
-  - Nome do autor (photographer)
-- Barra de pesquisa para buscar fotos por termos.
-- Modal de detalhes:
-  - Imagem em alta qualidade
-  - Nome do autor
-  - Descrição (se disponível)
-  - Link para o perfil do autor no Unsplash
-- Sistema de favoritos:
-  - Adicionar/remover favoritos (ícone de coração)
-  - Persistir favoritos com localStorage
+- **Feed de Fotos Aleatórias:** Grid de fotos em alta qualidade (lazy loading).
+- **Busca Personalizada:** Pesquise por termos (natureza, animais, cidades...).
+- **Favoritar Fotos:** Salve suas imagens preferidas com localStorage.
+- **Visualização em Modal:** Clique na foto para ver detalhes, autor, descrição e link do Unsplash.
+- **Remover Favoritos:** Tire fotos dos favoritos individualmente ou limpe tudo.
+- **Design Responsivo:** Funciona lindamente em desktop e mobile.
+- **Animações Suaves:** Mais fluidez na experiência.
+- **Tratamento de Erros:** Mensagens amigáveis para buscas vazias ou erro de API.
 
 ---
 
-## 💻 Tecnologias utilizadas
+## 🚀 Tecnologias Utilizadas
 
-- [Next.js](https://nextjs.org/)
-- [Typescript](https://www.typescriptlang.org/)
-- [Tailwind CSS](https://tailwindcss.com/)
-- [Axios](https://axios-http.com/)
-- [Unsplash API](https://unsplash.com/developers)
+- Next.js 14+
+- React
+- TypeScript
+- Tailwind CSS
+- Zustand
+- Unsplash API
 
 ---
 
-## 🚀 Como rodar o projeto
+## 🗂️ Estrutura do Projeto
 
-1. **Clone o repositório:**
-  
- [https://github.com/seuusuario/seurepo.git](https://github.com/seuusuario/seurepo.git)
-  cd seurepo
-2. Instale as dependências:
+desafio-front-end/
+├── public/
+│ ├── file.svg
+│ ├── globe.svg
+│ ├── home.png
+│ ├── meus-favoritos.png
+│ ├── modal-autor.png
+│ ├── next.svg
+│ ├── vercel.svg
+│ └── window.svg
+├── src/
+│ ├── app/
+│ │ ├── favicon.ico
+│ │ ├── globals.css
+│ │ ├── layout.tsx
+│ │ └── page.tsx
+│ ├── components/
+│ │ ├── ImageGallery.tsx
+│ │ └── Modal.tsx
+│ ├── hooks/
+│ │ └── useFavorites.ts
+│ └── services/
+│ └── unsplashService.ts
+├── .env.local
+├── package.json
+└── README.md
 
-npm install
-3. Configure a chave da API do Unsplash:
-Crie um arquivo .env.local na raiz do projeto e adicione sua chave:
+---
 
+## ⚙️ Como Rodar o Projeto
+
+### Pré-requisitos
+
+- Node.js 18.x ou superior
+- npm ou Yarn
+- Chave da [Unsplash API](https://unsplash.com/developers)
+
+### Instalação
+
+```bash
+git clone https://github.com/ThatianaMattos/desafio-front-end.git
+cd desafio-front-end
+
+# Crie um arquivo .env.local na raiz do projeto e adicione:
 NEXT_PUBLIC_UNSPLASH_ACCESS_KEY=sua_chave_aqui
-4. Execute o projeto:
 
+# Instale as dependências:
+npm install
+# ou
+yarn install
+Rode o projeto:
 npm run dev
-5. Acesse: [http://localhost:3000](http://localhost:3000)
+# ou
+yarn dev
+Acesse: http://localhost:3000
+🖼️ Prints do Projeto
+
+![Feed](public/home.png)
+![Favoritos](public/meus-favoritos.png)
+![Modal](public/modal-autor.png)
+
+🌐 Deploy
+Projeto hospedado em:
+https://alnicks-moments-insta.vercel.app 
+
+---
+## Licença
+
+Projeto aberto para fins educacionais.<br>
+“Tecnologia também cria memórias afetivas!” – Thatiana Mattos
+
+---
+## Contato
+
+Feito com 💙 por [Thatiana Mattos](https://www.linkedin.com/in/thatiana-mattos/) | [GitHub](https://github.com/ThatianaMattos)
+
+
