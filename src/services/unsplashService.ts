@@ -12,5 +12,8 @@ export const getImages = async (query: string = "nature") => {
       client_id: accessKey,
     },
   });
+  
+  console.log("RESULTADO DA API:", response.data.results);
+
   return response.data.results;
 };
