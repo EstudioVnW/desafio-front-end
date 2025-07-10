@@ -28,9 +28,13 @@ export default function Home() {
     try {
       const results = await searchPhotos(term);
       setPhotos(results);
-    } catch (error: any) {
+    } catch (error: unknown) {
       console.error("Erro ao buscar imagens:", error);
-      setError(error.message || "Erro desconhecido ao buscar imagens.");
+      if (error instanceof Error) {
+        setError(error.message);
+      } else {
+        setError("Erro desconhecido ao buscar imagens.");
+      }
     } finally {
       setLoading(false);
     }
@@ -70,7 +74,6 @@ export default function Home() {
               } hover:text-pink-400`}
               onClick={() => {
                 setShowFavorites(false);
-
                 if (photos.length === 0) {
                   handleSearch("nature");
                 }
