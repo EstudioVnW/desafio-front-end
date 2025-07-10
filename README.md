@@ -1,88 +1,103 @@
-# Desafio Técnico - Desenvolvedor Front-End
+# 📸 AlNicks Moments Insta
 
-Bem-vindo ao desafio técnico para a vaga de **Desenvolvedor Front-End**!
-
-Este repositório contém as instruções para o desenvolvimento de uma **Rede Social de Fotos (Mini-Instagram)**, com o objetivo de avaliar seus conhecimentos em consumo de API (https://unsplash.com/developers) utilizando Next.js, Tailwind CSS, Typescript.
-
----
-
-## 🎯 Objetivo
-
-Criar uma Rede Social de Fotos:
-
-1. **Crie um grid de fotos aleatórias (como um feed)**
-2. **Permita que o usuário pesquise fotos por termos (natureza, animais, etc.)**
-3. **Ao clicar em uma foto, exiba-a em um modal com detalhes do autor**
-4. **Implemente um sistema de "favoritos" usando localStorage, zustand ou outra biblioteca de estado**
+Bem-vindo(a) ao **AlNicks Moments Insta**!  
+Um mini Instagram de fotos feito com carinho, inspirado nos meus filhos: **Alicia + Nickolas = AlNicks**!  
+Desenvolvido com **Next.js 14+, Tailwind CSS, TypeScript** e integração com a **API do Unsplash**.
 
 ---
 
-## 🛠️ Requisitos Básicos
+## ✨ Funcionalidades
 
-Feed de Fotos:
-- Exiba um grid de fotos aleatórias (mínimo 12) ao carregar a página.
-- Cada foto deve mostrar:
-    - Imagem em alta qualidade (com lazy loading).
-    - Nome do autor (photographer).
-
-Barra de Pesquisa:
-- Permita que o usuário busque fotos por termos (ex: "cats", "beach").
-
-Modal de Detalhes:
-- Ao clicar em uma foto, exiba-a em um modal mostrando:
-    - Imagem em alta qualidade.
-    - Nome do autor (photographer).
-    - Descrição da foto (se disponível).
-    - Link para o perfil do autor no Unsplash.
-
-Sistema de Favoritos:
-- Implemente um sistema de favoritos usando localStorage, zustand ou outra biblioteca de estado.
-- Adicione um botão de favorito em cada foto.
-- Exiba um ícone de coração para indicar fotos favoritas.
-- Permita que o usuário remova fotos dos favoritos.
-
-
-## 🛠️ Requisitos Técnicos
-
-Para este desafio, é obrigatório:
-
-- Utilizar **Next.JS**
-- Utilizar **Tailwind CSS**
-- Utilizar **Typescript**
+- **Feed de Fotos Aleatórias:** Grid de fotos em alta qualidade (lazy loading).
+- **Busca Personalizada:** Pesquise por termos (natureza, animais, cidades...).
+- **Favoritar Fotos:** Salve suas imagens preferidas com localStorage.
+- **Visualização em Modal:** Clique na foto para ver detalhes, autor, descrição e link do Unsplash.
+- **Remover Favoritos:** Tire fotos dos favoritos individualmente ou limpe tudo.
+- **Design Responsivo:** Funciona lindamente em desktop e mobile.
+- **Animações Suaves:** Mais fluidez na experiência.
+- **Tratamento de Erros:** Mensagens amigáveis para buscas vazias ou erro de API.
 
 ---
 
-## 📝 API: Unsplash API (https://unsplash.com/developers) (crie uma conta gratuita para obter uma chave de acesso).
+## 🚀 Tecnologias Utilizadas
+
+- Next.js 14+
+- React
+- TypeScript
+- Tailwind CSS
+- Zustand
+- Unsplash API
 
 ---
 
-## 📝 Dicas de UI/UX:
-- Design Responsivo
-- Adapte o grid para mobile (ex: 1 coluna) e desktop (3+ colunas).
-- Animações suaves ao curtir fotos ou abrir o modal.
-- Tratamento de Erros
-- Mostre uma mensagem se a API falhar ou não houver resultados na busca.
+## 🗂️ Estrutura do Projeto
 
-## ✅ Critérios de Avaliação
+````text
+desafio-front-end/
+├── public/
+│   ├── file.svg
+│   ├── globe.svg
+│   ├── home.png
+│   └── ...
+├── src/
+│   ├── app/
+│   ├── components/
+│   └── ...
+└── README.md
 
-- Organização do código e estrutura do projeto
-- Boas práticas com Next.js e Typescript
-- Funcionamento completo da aplicação
-- Adoção de boas práticas de **Clean Code**
-- Organização geral do projeto (estrutura de diretórios, componetização, etc.)
-- Uso de **commits semânticos** (Conventional Commits)
-- README bem estruturado e informativo
-
----
-
-## 🚀 Entrega
-
-- Faça um **fork deste repositório** no GitHub.
-- Crie uma **branch com o seu nome** para trabalhar no desafio.
-- Incluir no README instruções claras de como rodar o projeto.
-- Hospedar o projeto em um servidor (Heroku, Vercel, Netlify)
 
 ---
 
-Boa sorte! 💻
+## ⚙️ Como Rodar o Projeto
 
+### Pré-requisitos
+
+- Node.js 18.x ou superior
+- npm ou Yarn
+- Chave da [Unsplash API](https://unsplash.com/developers)
+
+### Instalação
+
+```bash
+git clone https://github.com/ThatianaMattos/desafio-front-end.git
+cd desafio-front-end
+
+# Crie um arquivo .env.local na raiz do projeto e adicione:
+NEXT_PUBLIC_UNSPLASH_ACCESS_KEY=sua_chave_aqui
+
+# Instale as dependências:
+npm install
+# ou
+yarn install
+Rode o projeto:
+npm run dev
+# ou
+yarn dev
+Acesse: http://localhost:3000
+🖼️ Prints do Projeto
+
+![Feed](public/home.png)
+![Favoritos](public/meus-favoritos.png)
+![Modal](public/modal-autor.png)
+
+---
+## 🚀 Deploy
+
+Projeto disponível em produção:
+👉 [Clique aqui para acessar a aplicação!](https://desafio-front-end-seven.vercel.app)
+
+
+
+---
+## Licença
+
+Projeto aberto para fins educacionais.<br>
+“Tecnologia também cria memórias afetivas!” – Thatiana Mattos
+
+---
+## Contato
+
+Feito com 💙 por [Thatiana Mattos](https://www.linkedin.com/in/thatiana-mattos/) | [GitHub](https://github.com/ThatianaMattos)
+
+
+````
