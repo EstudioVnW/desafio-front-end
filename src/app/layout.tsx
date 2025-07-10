@@ -13,7 +13,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Mini Instagram da Thaty",
+  title: "AlNicks Moments Insta",
   description: "Mini Instagram feito com Next.js, Tailwind e Unsplash",
 };
 
