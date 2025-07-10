@@ -37,6 +37,10 @@ Projeto desenvolvido como desafio técnico para a vaga de **Desenvolvedora Front
 
 4. npm run dev
 
+5. Projeto online
+``` https://desafio-front-end-nine-sigma.vercel.app/
+
+
 Desenvolvido por
 Tulani Souza
 💼 Desenvolvedora Front-End/ Full Stack 
