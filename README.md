@@ -31,17 +31,21 @@ Projeto desenvolvido como desafio técnico para a vaga de **Desenvolvedora Front
    git clone https://github.com/TulaniSouza/desafio-front-end.git
 
 2. Instale as dependências:
-    ```npm install
+    ```bash
+    npm install
 
 3. Crie um arquivo `.env.local` com sua chave da API (necessário apenas para rodar localmente): UNSPLASH_ACCESS_KEY=sua_chave_aqui
 
-4. npm run dev
+4. Rode o projeto: 
+    ```bash
+    npm run dev
 
 5. Projeto online
-``` https://desafio-front-end-nine-sigma.vercel.app/
+    ```bash
+    Acesse em: https://desafio-front-end-liard.vercel.app
 
 
 Desenvolvido por
 Tulani Souza
-💼 Desenvolvedora Front-End/ Full Stack 
+💼 Desenvolvedora Front-End 
 🌱 Com fé, simplicidade e vontade de crescer!
