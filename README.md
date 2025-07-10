@@ -32,7 +32,7 @@ Desenvolvido com **Next.js 14+, Tailwind CSS, TypeScript** e integração com a 
 
 ## 🗂️ Estrutura do Projeto
 
-```text
+````text
 desafio-front-end/
 ├── public/
 │   ├── file.svg
@@ -80,9 +80,13 @@ Acesse: http://localhost:3000
 ![Favoritos](public/meus-favoritos.png)
 ![Modal](public/modal-autor.png)
 
-🌐 Deploy
-Projeto hospedado em:
-https://alnicks-moments-insta.vercel.app 
+---
+## 🚀 Deploy
+
+Projeto disponível em produção:
+👉 [Clique aqui para acessar a aplicação!](https://desafio-front-end-seven.vercel.app)
+
+
 
 ---
 ## Licença
@@ -96,3 +100,4 @@ Projeto aberto para fins educacionais.<br>
 Feito com 💙 por [Thatiana Mattos](https://www.linkedin.com/in/thatiana-mattos/) | [GitHub](https://github.com/ThatianaMattos)
 
 
+````
