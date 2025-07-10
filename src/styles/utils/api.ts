@@ -1,4 +1,4 @@
-import { Photo } from "../../types/photo";
+import { Photo } from "../../styles/types/photo";
 
 const ACCESS_KEY = "9a5cwvCMg03m26bMRh7D7pTiRwPX6_X5P_33bmY_Ops";
 
