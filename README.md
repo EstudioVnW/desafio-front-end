@@ -1,88 +1,51 @@
-# Desafio Técnico - Desenvolvedor Front-End
+# 📸 Mini Rede Social de Fotos
 
-Bem-vindo ao desafio técnico para a vaga de **Desenvolvedor Front-End**!
-
-Este repositório contém as instruções para o desenvolvimento de uma **Rede Social de Fotos (Mini-Instagram)**, com o objetivo de avaliar seus conhecimentos em consumo de API (https://unsplash.com/developers) utilizando Next.js, Tailwind CSS, Typescript.
+Projeto desenvolvido como desafio técnico para a vaga de **Desenvolvedora Front-End Júnior**, com foco em **Next.js**, **TypeScript** e **Tailwind CSS**. O objetivo foi criar uma rede social de fotos integrada com a **API do Unsplash**, utilizando boas práticas de código, acessibilidade e responsividade.
 
 ---
 
-## 🎯 Objetivo
+## 🚀 Tecnologias Utilizadas
 
-Criar uma Rede Social de Fotos:
-
-1. **Crie um grid de fotos aleatórias (como um feed)**
-2. **Permita que o usuário pesquise fotos por termos (natureza, animais, etc.)**
-3. **Ao clicar em uma foto, exiba-a em um modal com detalhes do autor**
-4. **Implemente um sistema de "favoritos" usando localStorage, zustand ou outra biblioteca de estado**
-
----
-
-## 🛠️ Requisitos Básicos
-
-Feed de Fotos:
-- Exiba um grid de fotos aleatórias (mínimo 12) ao carregar a página.
-- Cada foto deve mostrar:
-    - Imagem em alta qualidade (com lazy loading).
-    - Nome do autor (photographer).
-
-Barra de Pesquisa:
-- Permita que o usuário busque fotos por termos (ex: "cats", "beach").
-
-Modal de Detalhes:
-- Ao clicar em uma foto, exiba-a em um modal mostrando:
-    - Imagem em alta qualidade.
-    - Nome do autor (photographer).
-    - Descrição da foto (se disponível).
-    - Link para o perfil do autor no Unsplash.
-
-Sistema de Favoritos:
-- Implemente um sistema de favoritos usando localStorage, zustand ou outra biblioteca de estado.
-- Adicione um botão de favorito em cada foto.
-- Exiba um ícone de coração para indicar fotos favoritas.
-- Permita que o usuário remova fotos dos favoritos.
-
-
-## 🛠️ Requisitos Técnicos
-
-Para este desafio, é obrigatório:
-
-- Utilizar **Next.JS**
-- Utilizar **Tailwind CSS**
-- Utilizar **Typescript**
+- [Next.js](https://nextjs.org/)
+- [TypeScript](https://www.typescriptlang.org/)
+- [Tailwind CSS](https://tailwindcss.com/)
+- [Unsplash API](https://unsplash.com/developers)
+- [Vercel](https://vercel.com/) para deploy
 
 ---
 
-## 📝 API: Unsplash API (https://unsplash.com/developers) (crie uma conta gratuita para obter uma chave de acesso).
+## ✨ Funcionalidades
+
+- 🔄 Grid com fotos aleatórias ao carregar
+- 🔍 Barra de pesquisa de fotos por temas
+- 🖼️ Modal com detalhes da imagem
+- ❤️ Sistema de favoritos com persistência no `localStorage`
+- ⭐ Rota de favoritos com ícone de navegação
 
 ---
 
-## 📝 Dicas de UI/UX:
-- Design Responsivo
-- Adapte o grid para mobile (ex: 1 coluna) e desktop (3+ colunas).
-- Animações suaves ao curtir fotos ou abrir o modal.
-- Tratamento de Erros
-- Mostre uma mensagem se a API falhar ou não houver resultados na busca.
+## 📷 Como Rodar o Projeto
 
-## ✅ Critérios de Avaliação
+1. Clone o repositório:
+   ```bash
+   git clone https://github.com/TulaniSouza/desafio-front-end.git
 
-- Organização do código e estrutura do projeto
-- Boas práticas com Next.js e Typescript
-- Funcionamento completo da aplicação
-- Adoção de boas práticas de **Clean Code**
-- Organização geral do projeto (estrutura de diretórios, componetização, etc.)
-- Uso de **commits semânticos** (Conventional Commits)
-- README bem estruturado e informativo
+2. Instale as dependências:
+    ```bash
+    npm install
 
----
+3. Crie um arquivo `.env.local` com sua chave da API (necessário apenas para rodar localmente): UNSPLASH_ACCESS_KEY=sua_chave_aqui
 
-## 🚀 Entrega
+4. Rode o projeto: 
+    ```bash
+    npm run dev
 
-- Faça um **fork deste repositório** no GitHub.
-- Crie uma **branch com o seu nome** para trabalhar no desafio.
-- Incluir no README instruções claras de como rodar o projeto.
-- Hospedar o projeto em um servidor (Heroku, Vercel, Netlify)
+5. Projeto online
+    ```bash
+    Acesse em: https://desafio-front-end-liard.vercel.app
 
----
 
-Boa sorte! 💻
-
+Desenvolvido por
+Tulani Souza
+💼 Desenvolvedora Front-End 
+🌱 Com fé, simplicidade e vontade de crescer!
