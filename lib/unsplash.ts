@@ -24,7 +24,6 @@ export async function searchPhotos(query: string) {
     );
 
     if (!response.ok) {
-      // Em vez de lançar erro, apenas imprime no console e retorna array vazio
       console.error("Erro na busca:", response.status, response.statusText);
       return [];
     }
@@ -33,7 +32,7 @@ export async function searchPhotos(query: string) {
     return data.results;
   } catch (error) {
     console.error("Erro ao buscar fotos da Unsplash:", error);
-    return []; // retorna vazio se erro inesperado
+    return [];
   }
 }
 

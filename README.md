@@ -28,5 +28,11 @@ Tecnologias utilizadas
 
 Como rodar o projeto localmente
 
-1. Clone o repositório:
-git clone https://github.com/SEU_USUARIO/NOME_DO_REPO.git
+Clone o repositório:
+git clone https://github.com/EstudioVnW/desafio-front-end.git
+Acesse a pasta:
+cd desafio-front-end
+Instale as dependências:
+npm install
+Execute o projeto:
+npm run dev

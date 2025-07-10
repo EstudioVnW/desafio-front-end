@@ -113,8 +113,6 @@ export default function Home() {
             autoFocus={searchOpen}
             onBlur={() => setSearchOpen(false)}
           />
-
-          {/* Ícone de filtro */}
           <button
             className="p-2 text-gray-500 hover:text-pink-500 focus:outline-none ml-2"
             onClick={() => setShowFilters((v) => !v)}
@@ -122,8 +120,6 @@ export default function Home() {
           >
             <Filter size={20} />
           </button>
-
-          {/* Botões de filtro */}
           {showFilters && (
             <div className="absolute right-0 top-12 bg-white shadow-lg rounded-md p-2 flex flex-col gap-2 z-30">
               {["Nature", "Animals", "City", "Technology"].map((category) => (
