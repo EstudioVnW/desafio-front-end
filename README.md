@@ -32,32 +32,19 @@ Desenvolvido com **Next.js 14+, Tailwind CSS, TypeScript** e integração com a 
 
 ## 🗂️ Estrutura do Projeto
 
+```text
 desafio-front-end/
 ├── public/
-│ ├── file.svg
-│ ├── globe.svg
-│ ├── home.png
-│ ├── meus-favoritos.png
-│ ├── modal-autor.png
-│ ├── next.svg
-│ ├── vercel.svg
-│ └── window.svg
+│   ├── file.svg
+│   ├── globe.svg
+│   ├── home.png
+│   └── ...
 ├── src/
-│ ├── app/
-│ │ ├── favicon.ico
-│ │ ├── globals.css
-│ │ ├── layout.tsx
-│ │ └── page.tsx
-│ ├── components/
-│ │ ├── ImageGallery.tsx
-│ │ └── Modal.tsx
-│ ├── hooks/
-│ │ └── useFavorites.ts
-│ └── services/
-│ └── unsplashService.ts
-├── .env.local
-├── package.json
+│   ├── app/
+│   ├── components/
+│   └── ...
 └── README.md
+
 
 ---
 
