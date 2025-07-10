@@ -10,9 +10,10 @@ type Photoprops = {
     readonly id: string;
     readonly imageUrl: string;
     readonly photographer: string;
+    onClick?: () => void;
 };
 
-export default function Photo({ id, imageUrl, photographer }: Readonly<Photoprops>) {
+export default function Photo({ id, imageUrl, photographer, onClick }: Readonly<Photoprops>) {
     const [liked, setLiked] = useState(false);
 
     useEffect(() => {
@@ -24,10 +25,21 @@ export default function Photo({ id, imageUrl, photographer }: Readonly<Photoprop
         const newLiked = !liked;
         setLiked(newLiked);
         localStorage.setItem(`liked-${id}`, newLiked.toString());
+
+        const photoData = {
+            id,
+            imageUrl,
+            photographer,
+        };
+        if (newLiked){
+            localStorage.setItem(`photo-${id}`, JSON.stringify(photoData));
+        }else {
+            localStorage.removeItem(`photo-${id}`);
+        }
     };
 
     return (
-        <section className="relative">
+        <button className="relative cursor-pointer group"  onClick={onClick}>
             <Image
                 src={imageUrl}
                 alt={photographer}
@@ -37,7 +49,7 @@ export default function Photo({ id, imageUrl, photographer }: Readonly<Photoprop
                 loading="lazy"
             />
             <button
-                onClick={toggleLike}
+                onClick={(e)=>{e.stopPropagation(); toggleLike();}}
                 className="absolute top-2 right-2 bg-white/80 dark:bg-black/50 p-2 rounded-full hover:scale-110 transition-all"
                 aria-label={liked ? "Descurtir" : "Curtir"}>
                 {liked ? (
@@ -48,6 +60,6 @@ export default function Photo({ id, imageUrl, photographer }: Readonly<Photoprop
                 }
             </button>
             <p className="text-sm mt-2 text-center text-gray-600">{photographer}</p>
-        </section>
+        </button>
     );
 }

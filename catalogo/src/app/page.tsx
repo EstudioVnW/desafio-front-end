@@ -1,20 +1,24 @@
 "use client"
 
-import { useEffect, useState, FormEvent} from "react"
-import { getRandomPhotos, searchPhotos} from "@/lib/unsplash"
-import Photo from "@/components/Photo"
+import { useEffect, useState, FormEvent} from "react";
+import { getRandomPhotos, searchPhotos} from "@/lib/unsplash";
+import Photo from "@/components/Photo";
+import PhotoModal from "@/components/Modal";
 import { MagnifyingGlassIcon } from "@heroicons/react/24/outline";
 
 type PhotoType = {
   id: string;
-  urls: { small: string};
-  user: { name: string};
+  urls: { small: string; full:string};
+  user: { name: string; links:{html:string};};
+  description?:string;
 };
+
 
 export default function Home (){
   const [photos, setPhotos] = useState<PhotoType[]>([]);
   const [ loading,setLoading] =useState(true);
   const [query, setQuery] = useState("");
+  const [selectedPhoto, setSelectedPhoto] = useState<PhotoType | null>(null);
 
   useEffect (() =>{
     getRandomPhotos()
@@ -36,9 +40,13 @@ export default function Home (){
       setLoading(false);
     }
   };
+  const handlePhotoClick = (photo: PhotoType) =>{
+    setSelectedPhoto(photo);
+  };
 
 return(
   <main className="max-w-6xl mx-auto px-4 py-8">
+    <a href="/favoritos" className="text-blue-600 underline mb-4 block text-center"> Ver Favoritos</a>
     <form onSubmit={handleSearch} className="flex items-center gap-4 mb-8 justify-center">
       <input type="text" value={query} onChange={(e) => setQuery(e.target.value)} placeholder="Buscar fotos" className="border border-gray-300 px-4 py-2 rounded w-full max-w-md"/>
       <button type="submit" className="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 flex items-center gap-2"> 
@@ -55,9 +63,13 @@ return(
             id={photo.id}
             imageUrl={photo.urls.small}
             photographer={photo.user.name}
+            onClick={() => handlePhotoClick(photo)}
             />
         ))}
       </section>
+    )}
+    {selectedPhoto && (
+      <PhotoModal imageUrl={selectedPhoto.urls.full} photographer={selectedPhoto.user.name} description={selectedPhoto.description} profileUrl={selectedPhoto.user.links.html} onClose={() => setSelectedPhoto(null)}/>
     )}
   </main>
 )
